@@ -1,0 +1,77 @@
+<div class="container" ng-controller="homeController">
+
+    <div class="jumbotron">
+
+        <!--<form>-->
+            <!--<input type="text" id="search" placeholder="Szukaj.." >-->
+            <!--<button type="button" class="btn btn-primary" id="searchButton" ng-click="titleSearching()"  >  Szukaj  </button>-->
+         <!--</form>-->
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" placeholder="Search" type="text" ng-model="search">
+            <!--<button class="btn btn-primary" type="submit" id="searchButton" ng-click="titleSearching()">Szukaj</button>-->
+            <button class="btn btn-primary" type="submit" id="showButton" ng-click="searchingResoults()">Szukaj</button>
+        </form>
+<br>
+
+
+        <label class="btn btn-primary">
+            <input checked="" type="checkbox" ng-model="filters" > Pokaż filtry
+        </label>
+
+
+
+<div ng-show="filters">
+
+        <div class="form-group">
+            <label for="categorySelect">Kategoria</label>
+
+            <select id="categorySelect" class="form-control">
+                <option ng-repeat="x in categories">{{x}}</option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+   Wyszukujesz:  {{search}}
+
+
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="table">
+                <tr>
+                    <td>Id</td>
+                    <td>Tytul</td>
+                    <td>Opis</td>
+                    <td>Kategoria</td>
+
+                </tr>
+                <tr ng-repeat="ogloszenie in dane">
+
+                    <td><a href="#current/{{ogloszenie.id}}" target="_blank"  >{{ogloszenie.id}}</a></td>
+
+
+                    <td><a href="#current/{{ogloszenie.id}}" target="_blank">{{ogloszenie.title}}</a></td>
+                    <td><a href="#current/{{ogloszenie.id}}" target="_blank">{{ogloszenie.description}}</a></td>
+                    <td><a href="#current/{{ogloszenie.id}}" target="_blank">{{ogloszenie.category}}</a></td>
+                </tr>
+
+            </table>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+</div>
