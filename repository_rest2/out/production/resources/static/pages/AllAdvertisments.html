@@ -1,0 +1,62 @@
+<div class="container">
+    <h3> Oto ogłoszenia:</h3>
+
+    <div ng-controller="allAdvertismentsController">
+        <p><input type="button" value="Pokaż ogłoszenia" ng-click="getAdvertisments()"></p>
+
+
+        <h3>Ilosc rekordow:{{dane.length}}</h3>
+
+        <!--<ul>-->
+
+            <!--<li ng-repeat ogloszenie in dane>-->
+                <!--{{ogloszenie.id}} {{ogloszenie.title}} -->
+
+            <!--</li>-->
+
+        <!--</ul>-->
+
+        <!--<span ng-repeat="ogloszenie in dane">-->
+
+
+   <!--<table border="1" cellpadding="10">-->
+      <!--<tr ng-repeat="ogloszenie in dane">-->
+         <!--<td>{{ogloszenie.id}}  </td>-->
+         <!--<td> {{ogloszenie.title}}</td>-->
+<!--<tr/>-->
+   <!--</table>-->
+        <!--</span>-->
+
+<div class="row">
+    <div class="col-sm-6">
+        <table class="table">
+            <tr>
+                <td>Id</td>
+                <td>Tytul</td>
+                <td>Opis</td>
+                <td>Kategoria</td>
+
+            </tr>
+            <tr ng-repeat="ogloszenie in dane">
+                <td>{{ogloszenie.id}}</td>
+                <td>{{ogloszenie.title}}</td>
+                <td>{{ogloszenie.description}}</td>
+                <td>{{ogloszenie.category}}</td>
+            </tr>
+
+        </table>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+</div>
